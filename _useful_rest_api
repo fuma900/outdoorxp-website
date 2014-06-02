@@ -1,0 +1,36 @@
+
+
+curl -X POST \
+  -H "X-Parse-Application-Id: 3wJvlKuzhCx3AR874cdD2kpOU9UQHkUSLcRHOaUV" \
+  -H "X-Parse-REST-API-Key: 28bvgcs9qBIZtaRXwHRmfnzFORthaK0izz0393Ur" \
+  -H "Content-Type: application/json" \
+  -d '{
+        "name": "guest",
+        "ACL": {
+          "*": {
+            "read": true
+          }
+        }
+      }' \
+  https://api.parse.com/1/roles
+
+
+**** ADD USER TO ROLE ADMIN ****
+
+curl -X PUT \
+  -H "X-Parse-Application-Id: 3wJvlKuzhCx3AR874cdD2kpOU9UQHkUSLcRHOaUV" \
+  -H "X-Parse-Master-Key: 7Rj56q3wveV95i7MnCIFWITkOhf4qVqoSvpwSuiP" \
+  -H "Content-Type: application/json" \
+  -d '{
+        "users": {
+          "__op": "AddRelation",
+          "objects": [
+            {
+              "__type": "Pointer",
+              "className": "_User",
+              "objectId": "LSb9CkqSeb"
+            }
+          ]
+        }
+      }' \
+  https://api.parse.com/1/roles/E8FTFZ4Mg9

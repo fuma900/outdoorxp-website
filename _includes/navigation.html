@@ -1,0 +1,64 @@
+<nav class="navbar navbar-default" role="navigation">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<div class="logo">
+				<img src="/img/logo.png" id="logo" alt="Logo">
+				<a class="navbar-brand hidden-sm" href="/" id="brand">{{ site.name }}</a>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-collapse ">
+			<ul class="nav navbar-nav">
+				<li {% if page.page == 'about'%}class="active"{% endif %}><a href="/chi-siamo">Chi siamo</a></li>
+				<li {% if page.page == 'catalogues'%}class="active"{% endif %}><a href="/cataloghi">Cataloghi e Listini</a></li>
+				<li class="{% if page.page == 'partner'%}active{% endif %} hide" id="partner-link"><a href="/partner">Area Privata</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<a href="/chi-siamo#contatti" type="button" class="btn btn-primary navbar-btn text-center hidden-xs">Contattaci</a>
+				<a href="/chi-siamo#contatti" type="button" class="btn btn-primary navbar-btn text-center visible-xs btn-block">Contattaci</a>
+			<!--
+				{% if page.page == 'partner' or page.page == 'admin' %}
+					<a href="#" onClick="logout()" type="button" class="btn btn-danger navbar-btn text-center visible-xs btn-block logout-button">Esci</a>
+				{% else %}
+					<a href="/login" type="button" class="btn btn-default navbar-btn text-center visible-xs btn-block">Accedi</a>
+				{% endif %}
+			-->
+				<a href="#" type="button" class="btn navbar-btn text-center visible-xs btn-block access"></a>
+			</ul>
+			<ul class="nav navbar-nav navbar-right hidden-xs" style="margin-right:10px;">
+			<!--
+				{% if page.page == 'partner' or page.page == 'admin' %}
+					<a href="#" onClick="logout()" type="button" class="btn btn-danger navbar-btn text-center hidden-xs logout-button">Esci</a>
+				{% else %}
+					<a href="/login" type="button" class="btn btn-default navbar-btn text-center hidden-xs">Accedi</a>
+				{% endif %}
+			-->
+				<a href="#" type="button" class="btn navbar-btn text-center hidden-xs access"></a>
+			</ul>
+			<script charset="utf-8">
+					var access = $('.access');
+					if (!loggedIn) {
+						access.click(function () {
+							location.replace('/login');
+						});
+						access.addClass('btn-default');
+						access.html('Accedi');
+					} else if(loggedIn) {
+						access.click(logout);
+						access.html('Esci');
+						access.addClass('btn-danger logout-button');
+						$('#partner-link').removeClass('hide');
+					}
+			</script>
+		</div><!-- /.navbar-collapse -->
+	</div>
+</nav>

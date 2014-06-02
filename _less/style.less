@@ -1,0 +1,165 @@
+/* ===================================================================
+Import Bootstrap LESS and Site Specific LESS
+=================================================================== */
+ 
+@import 'bootstrap.less'; /* Compiled in Codekit - referenced here as a Framework */
+@import 'responsive-utilities.less'; /* Load Responsive media queries  */
+@import '../less/variables.less'; /* Your site specific LESS variables - these override BS defaults  */
+
+
+article {
+	padding-bottom: 10px;
+}
+
+#logo {
+	height:50px;
+	float:left;
+	margin:5px;
+}
+
+.navbar {
+	text-shadow: 1px 1px @gray;
+	margin-bottom: 0;
+
+	.btn-default {
+		color: @gray;
+		text-shadow: none;
+	}
+}
+
+.map-div {
+	padding-left: 0;
+}
+
+.heading-wrap {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	background: @gray-lighter;
+}
+
+
+div.thumbnail {
+	text-align: center;
+	height: 215px;
+	border: 0;
+	background-color: @gray-lighter;
+	img {
+		max-width: 200px !important;
+		max-height: 80px !important;
+		margin: 10px auto;
+	}
+}
+
+h1 {
+	//color: darken(@navbar-default-bg, 30%);
+}
+
+h2 {
+	color: @gray;
+}
+
+section {
+	margin-bottom: 10px;
+
+	& p:first-child, & address:first-child {
+		padding-top:10px;
+	}
+}
+
+table {
+	text-align: center;
+	& th {
+		text-align: center;
+		font-size: @font-size-base*1.2;
+	}
+}
+
+.listini, .cataloghi {
+	margin: 0;
+	padding: 0;
+
+	p:first-child {
+		padding-top: 0;
+	}
+}
+
+form {
+	padding: 30px;
+}
+
+#admin table {
+	margin-top: 20px;
+}
+
+@media (max-width: @screen-sm-max) {
+	h2, h4, p, address {
+		text-align: center;
+	}
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
+	.index .well {
+		height: 180px;
+	}
+}
+
+@media (min-width: @screen-md-min){
+	.index .well {
+		height: 250px;
+	}
+}
+
+.index {
+	.row {
+		margin-top: 20px;
+		.well {
+			background: @gray-lighter;
+			border: 0;
+			color: @gray;
+			box-shadow: none;
+	   -moz-box-shadow: none;
+	-webkit-box-shadow: none;
+			text-align: center;
+
+			h2 {
+				margin-top: 5px;
+			}
+		}
+	}
+
+}
+
+/* Sticky footer styles
+      -------------------------------------------------- */
+html,
+body {
+	height: 100%;
+	// background: url("../img/bg-top.gif") repeat-x;
+/* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	/* Negative indent footer by it's height */
+	margin: 0 auto -61px;
+	padding-bottom: 70px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+	height: 60px;
+}
+#footer {
+	background-color: @gray-lighter;
+}
+
+.container .credit {
+  margin: 20px 0;
+}
+
+
+
+

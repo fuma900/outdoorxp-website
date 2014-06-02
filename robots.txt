@@ -1,0 +1,23 @@
+User-agent: *
+Disallow: /marchi/
+
+User-agent: *
+Disallow: /js/
+
+User-agent: *
+Disallow: /img/
+
+User-agent: *
+Disallow: /fonts/
+
+User-agent: *
+Disallow: /css/
+
+User-agent: *
+Disallow: /admin/
+
+User-agent: *
+Disallow: /partner/
+
+User-agent: *
+Disallow: /marchi/

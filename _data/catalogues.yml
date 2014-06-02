@@ -1,0 +1,33 @@
+- name: Beautiful
+  web: http://www.beautifool.it
+  tag: beautifool
+  catalogue:
+    - name: Catalogo Generale
+      link: catalogo_beautifool_2014.pdf
+
+- name: Nordic Hot Tubs
+  web: http://www.nordichottubs.com
+  tag: nordic
+  catalogue:
+    - name: Catalogo Generale
+      link: catalogo_nordic_2014.pdf
+  pricing:
+    - name: Listino Generale
+      link: listino_nordic_costumer.xlsx
+
+- name: Starmatrix
+  web: http://www.starmatrix.cn
+  tag: starmatrix
+  catalogue:
+    - name: Catalogo Generale
+      link: catalogo_starmatrix_2014.pdf
+  pricing:
+    - name: Listino Generale
+      link: listino_starmatrix_2014.xls
+
+- name: Tene
+  tag: tene
+  web: http://www.tenekaubandus.ee
+  catalogue:
+    - name: Catalogo Generale
+      link: catalogo_tene_2013.pdf

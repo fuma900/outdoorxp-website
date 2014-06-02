@@ -1,0 +1,75 @@
+---
+layout: default
+title: " - Cataloghi"
+securescript: true
+page: catalogues
+---
+<!-- MARCHI -->
+
+<noscript>
+	<center>I cataloghi e i listini possono essere visualizzati solo con javascript abilitato. Attivalo ora.</center>
+</noscript>
+
+<div id="cataloghi" class="hide">
+	<div class="heading-wrap">
+		<div class="container">
+			<h2>Marchi rappresentati</h2>
+		</div>
+	</div>
+	<section class="container">
+		<article>
+			<p>Clicca sul marchio desiderato per visualizzare il sito web dell'azienda, oppure clicca sul bottone per accedere ai cataloghi ed ai listini disponibili.</p>
+		</article>
+
+		{% for brand in site.data.catalogues %}
+			<div class="col-md-3 col-sm-6 col-xs-12 marchi-div">
+				<div class="thumbnail">
+					<a href="{{ brand.web }}" target="_blank" onClick="trackOutboundLink(this, 'link in uscita'); return false;">
+						<h4>{{ brand.name }}</h4>
+						<img class="marchio" src="/marchi/{{ brand.tag }}/logo_{{ brand.tag }}.jpg" alt="{{ brand.name }}">
+					</a>
+					<div class="caption">
+						<a href="#{{ brand.tag }}" type="button" class="btn btn-primary">Cataloghi e listini</a>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</section>
+
+	<!-- CATALOGHI/LISTINI -->
+	{% for brand in site.data.catalogues %}
+		<a name="{{ brand.tag }}"></a>
+		<div class="heading-wrap">
+			<div class="container">
+				<h2>{{ brand.name }}</h2>
+			</div>
+		</div>
+		<section class="container">
+			<article>
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<h4>Cataloghi</h4>
+					{% if brand.catalogue %}
+						{% for catalogue in brand.catalogue %}
+							<p><a href="/marchi/{{ brand.tag }}/{{ catalogue.link }}" target="_blank" onClick="trackOutboundLink(this, 'listino'); return false;">{{ catalogue.name }}</a></p>
+						{% endfor %}
+					{% else %}
+						<p class="text-muted">Al momento nessun catalogo risulta disponibile</p>
+					{% endif %}
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<h4>Listini</h4>
+					{% if brand.pricing %}
+						{% for pricing in brand.pricing %}
+							<p><a href="/marchi/{{ brand.tag }}/{{ pricing.link }}" target="_blank" onClick="trackOutboundLink(this, 'listino'); return false;">{{ pricing.name }}</a></p>
+						{% endfor %}
+					{% else %}
+						<p class="text-muted">Al momento nessun listino risulta disponibile</p>
+					{% endif %}
+				</div>
+			</article>
+		</section>
+	{% endfor %}
+</div>
+<script charset="utf-8">
+	$('#cataloghi').removeClass('hide');
+</script>
