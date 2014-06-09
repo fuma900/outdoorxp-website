@@ -1,14 +1,17 @@
 /* ===================================================================
 Import Bootstrap LESS and Site Specific LESS
 =================================================================== */
- 
-@import 'bootstrap.less'; /* Compiled in Codekit - referenced here as a Framework */
-@import 'responsive-utilities.less'; /* Load Responsive media queries  */
-@import '../less/variables.less'; /* Your site specific LESS variables - these override BS defaults  */
 
+@import 'less/bootstrap.less'; /* Compiled in Codekit - referenced here as a Framework */
+@import 'less/responsive-utilities.less'; /* Load Responsive media queries  */
+@import '../_less/variables.less'; /* Your site specific LESS variables - these override BS defaults  */
 
 article {
 	padding-bottom: 10px;
+}
+
+#cookie {
+  padding-top: 10px;
 }
 
 #logo {
@@ -150,7 +153,7 @@ body {
 
 /* Set the fixed height of the footer here */
 #footer {
-	height: 60px;
+	// height: 60px;
 }
 #footer {
 	background-color: @gray-lighter;
@@ -159,7 +162,3 @@ body {
 .container .credit {
   margin: 20px 0;
 }
-
-
-
-
