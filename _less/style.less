@@ -6,6 +6,10 @@ Import Bootstrap LESS and Site Specific LESS
 @import 'less/responsive-utilities.less'; /* Load Responsive media queries  */
 @import '../_less/variables.less'; /* Your site specific LESS variables - these override BS defaults  */
 
+.nobreak {
+	white-space: nowrap;
+}
+
 article {
 	padding-bottom: 10px;
 }
@@ -27,6 +31,13 @@ article {
 	.btn-default {
 		color: @gray;
 		text-shadow: none;
+	}
+}
+
+.navbar-default .navbar-toggle {
+	border: 0;
+	&:hover, &:focus {
+		background-color: #6e96bf;
 	}
 }
 

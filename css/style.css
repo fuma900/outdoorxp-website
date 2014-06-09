@@ -5012,6 +5012,9 @@ td.visible-print {
 /* Compiled in Codekit - referenced here as a Framework */
 /* Load Responsive media queries  */
 /* Your site specific LESS variables - these override BS defaults  */
+.nobreak {
+  white-space: nowrap;
+}
 article {
   padding-bottom: 10px;
 }
@@ -5030,6 +5033,13 @@ article {
 .navbar .btn-default {
   color: #555555;
   text-shadow: none;
+}
+.navbar-default .navbar-toggle {
+  border: 0;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #6e96bf;
 }
 .map-div {
   padding-left: 0;
