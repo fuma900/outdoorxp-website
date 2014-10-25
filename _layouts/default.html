@@ -61,9 +61,10 @@
 		<noscript>
 				<center>Javascript &egrave; disabilitato. Attivalo per usare tutte le funzionalit&agrave; del sito.</center>
 		</noscript>
-		<div id="cookie" style="display:none">
+		<div id="cookie" style="display:none;position:relative">
 			<p class="text-center">Questo sito può usare dei cookie per migliorare la vostra esperienza sul sito.</p>
 			<p class="text-center">Continuando nella navigazione accettate la nostra privacy policy. <a href="/privacy">Maggiori informazioni</a></p>
+			<span class="glyphicon glyphicon-remove" style="position: absolute;top: 50%;right: 20px;cursor: pointer;" id="dismiss-cookie"></span>
 		</div>
 		<div id="wrap">
 			{% include navigation.html %}
@@ -83,6 +84,9 @@
 				$.cookie('cookieEU', true, { expires: 7, path: '/' });
 				$('#cookie').show();
 			}
+			$('#dismiss-cookie').click(function(){
+				$('#cookie').hide();
+			});
 		</script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
