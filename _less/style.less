@@ -5,6 +5,7 @@ Import Bootstrap LESS and Site Specific LESS
 @import 'less/bootstrap.less'; /* Compiled in Codekit - referenced here as a Framework */
 @import 'less/responsive-utilities.less'; /* Load Responsive media queries  */
 @import '../_less/variables.less'; /* Your site specific LESS variables - these override BS defaults  */
+@import 'build/lesshat.less'; /* Load Mixins */
 
 .nobreak {
 	white-space: nowrap;
@@ -32,13 +33,36 @@ article {
 	.navbar-brand{
 		padding-left: 5px;
 		padding-right: 5px;
+		line-height: 18px;
 	}
+}
+
+.btn {
+	border: 0;
+	min-width: 5.14em;
+	padding: 0.7em 0.57em;
+	margin: 9px 0px;
+	.border-radius(3px);
+	.box-shadow(rgba(0, 0, 0, 0.156863) 0px 2px 5px 0px);
+	.transition(box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1));
+}
+
+.btn:hover {
+	.box-shadow(rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px);
+}
+
+.btn-default:hover {
+	background-color: @btn-default-bg;
+}
+
+.btn-primary:hover {
+	background-color: @btn-primary-bg;
 }
 
 .navbar {
 	text-shadow: 1px 1px @gray;
 	margin-bottom: 0;
-
+	font-weight: 400;
 	.btn-default {
 		color: @gray;
 		text-shadow: none;
@@ -110,6 +134,19 @@ table {
 
 form {
 	padding: 30px;
+	input.form-control {
+		.box-shadow(none);
+		padding-bottom: 7px;
+		border-top: 0;
+		border-left: 0;
+		border-right: 0;
+		border-bottom: 1px solid @gray-light;
+		&:hover, &:active, &:focus {
+			padding-bottom: 6px;
+			border-bottom: 2px solid @brand-primary;
+			.box-shadow(none);
+		}
+	}
 }
 
 #admin table {
@@ -159,6 +196,7 @@ form {
 html,
 body {
 	height: 100%;
+	font-weight: 300;
 	// background: url("../img/bg-top.gif") repeat-x;
 /* The html and body elements cannot have any padding or margin. */
 }

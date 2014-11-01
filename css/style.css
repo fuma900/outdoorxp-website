@@ -255,7 +255,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-family: "Roboto", Helvetica, sans-serif;
   font-size: 15px;
   line-height: 1.42857143;
   color: #333333;
@@ -301,6 +301,8 @@ img {
   border: 1px solid #dddddd;
   border-radius: 0;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   display: inline-block;
   max-width: 100%;
@@ -400,7 +402,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-family: "Roboto", Helvetica, sans-serif;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -1600,6 +1602,18 @@ output {
 .form-control::-webkit-input-placeholder {
   color: #999999;
 }
+.form-control::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+.form-control:-moz-placeholder {
+  color: #aaaaaa;
+}
+.form-control::-moz-placeholder {
+  color: #aaaaaa;
+}
+.form-control:-ms-input-placeholder {
+  color: #aaaaaa;
+}
 .form-control {
   display: block;
   width: 100%;
@@ -1614,14 +1628,19 @@ output {
   border: 1px solid #cccccc;
   border-radius: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -moz-transition: border-color ease-in-out .15s, -moz-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .form-control:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 .form-control[disabled],
@@ -1730,11 +1749,13 @@ textarea.input-lg {
 .has-warning .form-control {
   border-color: #c09853;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .has-warning .form-control:focus {
   border-color: #a47e3c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
 }
 .has-warning .input-group-addon {
@@ -1753,11 +1774,13 @@ textarea.input-lg {
 .has-error .form-control {
   border-color: #b94a48;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .has-error .form-control:focus {
   border-color: #953b39;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
 }
 .has-error .input-group-addon {
@@ -1776,11 +1799,13 @@ textarea.input-lg {
 .has-success .form-control {
   border-color: #468847;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .has-success .form-control:focus {
   border-color: #356635;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
 }
 .has-success .input-group-addon {
@@ -1874,10 +1899,10 @@ textarea.input-lg {
   font-size: 15px;
   line-height: 1.42857143;
   border-radius: 0;
+  -o-user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  -o-user-select: none;
   user-select: none;
 }
 .btn:focus {
@@ -1895,6 +1920,7 @@ textarea.input-lg {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 .btn.disabled,
@@ -1902,9 +1928,13 @@ textarea.input-lg {
 fieldset[disabled] .btn {
   cursor: not-allowed;
   pointer-events: none;
-  opacity: 0.65;
+  zoom: 1;
   filter: alpha(opacity=65);
+  -webkit-opacity: 0.65;
+  -moz-opacity: 0.65;
+  opacity: 0.65;
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
 }
 .btn-default {
@@ -2141,6 +2171,7 @@ fieldset[disabled] .btn-info.active {
 fieldset[disabled] .btn-link {
   background-color: transparent;
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
 }
 .btn-link,
@@ -2195,6 +2226,8 @@ input[type="button"].btn-block {
 .fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
 }
 .fade.in {
@@ -2211,6 +2244,8 @@ input[type="button"].btn-block {
   height: 0;
   overflow: hidden;
   -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
   transition: height 0.35s ease;
 }
 @font-face {
@@ -2865,6 +2900,7 @@ input[type="button"].btn-block {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 0;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
 }
@@ -3100,10 +3136,12 @@ input[type="button"].btn-block {
 }
 .btn-group.open .dropdown-toggle {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 .btn-group.open .dropdown-toggle.btn-link {
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
 }
 .btn .caret {
@@ -3806,6 +3844,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   margin-top: 12.5px;
   margin-bottom: 12.5px;
@@ -3846,6 +3885,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
     padding-top: 0;
     padding-bottom: 0;
     -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     box-shadow: none;
   }
 }
@@ -4083,6 +4123,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
   border: 1px solid #dddddd;
   border-radius: 0;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   display: inline-block;
   max-width: 100%;
@@ -4211,6 +4253,7 @@ a.list-group-item.active:focus .list-group-item-text {
   border: 1px solid #e3e3e3;
   border-radius: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 .well blockquote {
@@ -4232,16 +4275,22 @@ a.list-group-item.active:focus .list-group-item-text {
   line-height: 1;
   color: #000000;
   text-shadow: 0 1px 0 #ffffff;
-  opacity: 0.2;
+  zoom: 1;
   filter: alpha(opacity=20);
+  -webkit-opacity: 0.2;
+  -moz-opacity: 0.2;
+  opacity: 0.2;
 }
 .close:hover,
 .close:focus {
   color: #000000;
   text-decoration: none;
   cursor: pointer;
-  opacity: 0.5;
+  zoom: 1;
   filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
 }
 button.close {
   padding: 0;
@@ -4266,6 +4315,8 @@ button.close {
 }
 .modal.fade .modal-dialog {
   -webkit-transform: translate(0, -25%);
+  -moz-transform: translate(0, -25%);
+  -o-transform: translate(0, -25%);
   -ms-transform: translate(0, -25%);
   transform: translate(0, -25%);
   -webkit-transition: -webkit-transform 0.3s ease-out;
@@ -4275,6 +4326,8 @@ button.close {
 }
 .modal.in .modal-dialog {
   -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   transform: translate(0, 0);
 }
@@ -4304,12 +4357,18 @@ button.close {
   background-color: #000000;
 }
 .modal-backdrop.fade {
-  opacity: 0;
+  zoom: 1;
   filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
 }
 .modal-backdrop.in {
-  opacity: 0.5;
+  zoom: 1;
   filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
 }
 .modal-header {
   padding: 15px;
@@ -4382,6 +4441,8 @@ button.close {
   display: none;
   position: relative;
   -webkit-transition: 0.6s ease-in-out left;
+  -moz-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
   transition: 0.6s ease-in-out left;
 }
 .carousel-inner > .item > img,
@@ -4427,8 +4488,11 @@ button.close {
   left: 0;
   bottom: 0;
   width: 15%;
-  opacity: 0.5;
+  zoom: 1;
   filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
   font-size: 20px;
   color: #ffffff;
   text-align: center;
@@ -4456,8 +4520,11 @@ button.close {
 .carousel-control:focus {
   color: #ffffff;
   text-decoration: none;
-  opacity: 0.9;
+  zoom: 1;
   filter: alpha(opacity=90);
+  -webkit-opacity: 0.9;
+  -moz-opacity: 0.9;
+  opacity: 0.9;
 }
 .carousel-control .icon-prev,
 .carousel-control .icon-next,
@@ -5012,8 +5079,12 @@ td.visible-print {
 /* Compiled in Codekit - referenced here as a Framework */
 /* Load Responsive media queries  */
 /* Your site specific LESS variables - these override BS defaults  */
+/* Load Mixins */
 .nobreak {
   white-space: nowrap;
+}
+section p:first-child {
+  padding-top: 0px;
 }
 article {
   padding-bottom: 10px;
@@ -5029,10 +5100,43 @@ article {
 .logo .navbar-brand {
   padding-left: 5px;
   padding-right: 5px;
+  line-height: 18px;
+}
+.btn {
+  border: 0;
+  min-width: 5.14em;
+  padding: 0.7em 0.57em;
+  margin: 9px 0px;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.156863) 0px 2px 5px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.156863) 0px 2px 5px 0px;
+  box-shadow: rgba(0, 0, 0, 0.156863) 0px 2px 5px 0px;
+  -webkit-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: -moz-box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+  box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+}
+.btn-default:hover {
+  background-color: #ffffff;
+}
+.btn-primary:hover {
+  background-color: #003366;
 }
 .navbar {
   text-shadow: 1px 1px #555555;
   margin-bottom: 0;
+  font-weight: 400;
 }
 .navbar .btn-default {
   color: #555555;
@@ -5093,6 +5197,25 @@ table th {
 form {
   padding: 30px;
 }
+form input.form-control {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding-bottom: 7px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #999999;
+}
+form input.form-control:hover,
+form input.form-control:active,
+form input.form-control:focus {
+  padding-bottom: 6px;
+  border-bottom: 2px solid #003366;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
 #admin table {
   margin-top: 20px;
 }
@@ -5134,6 +5257,7 @@ form {
 html,
 body {
   height: 100%;
+  font-weight: 300;
   /* The html and body elements cannot have any padding or margin. */
 }
 /* Wrapper for page content to push down footer */

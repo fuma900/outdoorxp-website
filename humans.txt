@@ -3,11 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
+    Marco Fumagalli -- CTO -- @fuma900
 
 # TECHNOLOGY COLOPHON
 
