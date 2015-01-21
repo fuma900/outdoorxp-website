@@ -49,18 +49,18 @@
     - name: Catalogo Generale 2015
       link: catalogo_tanjaya_2015.pdf
 
-- name: Tene
-  tag: tene
-  web: http://www.tenekaubandus.ee
-  catalogue:
-    - name: Catalogo Generale 2013
-      link: catalogo_tene_2013.pdf
-    - name: Catalogo Weekend 2014
-      link: catalogo_weekend_2014.pdf
-    - name: Catalogo 25-40mm 2014
-      link: catalogo_sp 25_40mm_2014.pdf
-    - name: Catalogo 58-70mm 2014
-      link: catalogo_sp 58_70mm_2014.pdf
-  pricing:
-    - name: Listino Generale 2014
-      link: listino_pubblico_2014.xlsx
+# - name: Tene
+#   tag: tene
+#   web: http://www.tenekaubandus.ee
+#   catalogue:
+#     - name: Catalogo Generale 2013
+#       link: catalogo_tene_2013.pdf
+#     - name: Catalogo Weekend 2014
+#       link: catalogo_weekend_2014.pdf
+#     - name: Catalogo 25-40mm 2014
+#       link: catalogo_sp 25_40mm_2014.pdf
+#     - name: Catalogo 58-70mm 2014
+#       link: catalogo_sp 58_70mm_2014.pdf
+#   pricing:
+#     - name: Listino Generale 2014
+#       link: listino_pubblico_2014.xlsx
