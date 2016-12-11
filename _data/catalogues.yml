@@ -1,3 +1,10 @@
+- name: Heliana
+  web: http://www.heliana-power.com
+  tag: heliana
+  catalogue:
+    - name: Catalogo Generale
+      link: catalogo_heliana.pdf
+
 - name: Beautiful
   web: http://www.beautifool.it
   tag: beautifool
@@ -5,62 +12,82 @@
     - name: Catalogo Generale
       link: catalogo_beautifool_2014.pdf
 
-- name: Jilong
-  tag: jilong
-  web: http://www.jilong.com/en/index.aspx
-  catalogue:
-    - name: Catalogo Air Bed 2015
-      link: airbed_2015.pdf
-    - name: Catalogo Fun 2015
-      link: fun_2015.pdf
-    - name: Catalogo Pool 2015
-      link: pool_2015.pdf
-    - name: Catalogo Spa 2015
-      link: spa_2015.pdf
-    - name: Catalogo Sport 2015
-      link: sport_2015.pdf
-    - name: Catalogo Sup 2015
-      link: sup_2015.pdf
+- name: Bestway
+  web: http://www.bestwaycorp.us
+  tag: bestway
+
+# - name: Jilong
+#   tag: jilong
+#   web: http://www.jilong.com/en/index.aspx
+#   catalogue:
+#     - name: Catalogo Air Bed 2015
+#       link: airbed_2015.pdf
+#     - name: Catalogo Fun 2015
+#       link: fun_2015.pdf
+#     - name: Catalogo Pool 2015
+#       link: pool_2015.pdf
+#     - name: Catalogo Spa 2015
+#       link: spa_2015.pdf
+#     - name: Catalogo Sport 2015
+#       link: sport_2015.pdf
+#     - name: Catalogo Sup 2015
+#       link: sup_2015.pdf
 
 - name: Nordic Hot Tubs
   web: http://www.nordichottubs.com
   tag: nordic
   catalogue:
-    - name: Catalogo Generale 2014
+    - name: Catalogo Generale
       link: catalogo_nordic_2014.pdf
   pricing:
-    - name: Listino Generale 2014
+    - name: Listino Generale
       link: listino_nordic_costumer.pdf
 
-- name: Starmatrix
-  web: http://www.starmatrix.cn
-  tag: starmatrix
-  catalogue:
-    - name: Catalogo Generale 2014
-      link: catalogo_starmatrix_2014.pdf
-  pricing:
-    - name: Listino Generale 2014
-      link: listino_starmatrix_2014.xls
-
-- name: Tanjaya
-  tag: tanjaya
-  web: http://web.tanjayasinar.com
-  catalogue:
-    - name: Catalogo Generale 2015
-      link: catalogo_tanjaya_2015.pdf
-
-# - name: Tene
-#   tag: tene
-#   web: http://www.tenekaubandus.ee
+# - name: Starmatrix
+#   web: http://www.starmatrix.cn
+#   tag: starmatrix
 #   catalogue:
-#     - name: Catalogo Generale 2013
-#       link: catalogo_tene_2013.pdf
-#     - name: Catalogo Weekend 2014
-#       link: catalogo_weekend_2014.pdf
-#     - name: Catalogo 25-40mm 2014
-#       link: catalogo_sp 25_40mm_2014.pdf
-#     - name: Catalogo 58-70mm 2014
-#       link: catalogo_sp 58_70mm_2014.pdf
+#     - name: Catalogo Gartenkraft e Starmist
+#       link: catalogo_starmatrix.pdf
+#     - name: Catalogo Generale 2014
+#       link: catalogo_starmatrix_2014.pdf
 #   pricing:
 #     - name: Listino Generale 2014
-#       link: listino_pubblico_2014.xlsx
+#       link: listino_starmatrix_2014.xls
+#     - name: Listino Blue Bay
+#       link: listino_bluebay.pdf
+
+# - name: Tanjaya
+#   tag: tanjaya
+#   web: http://web.tanjayasinar.com
+#   catalogue:
+#     - name: Catalogo Generale 2015
+#       link: catalogo_tanjaya_2015.pdf
+
+- name: Outdoor Experience
+  web: \#
+  tag: outdoorexperience
+  catalogue:
+    - name: Catalogo Gartenkraft e Starmist
+      link: catalogo_starmatrix.pdf
+  pricing:
+    - name: Listino Blue Bay
+      link: listino_bluebay.pdf
+
+- name: Tene
+  tag: tene
+  web: http://www.tenekaubandus.ee
+  catalogue:
+    - name: Catalogo Generale
+      link: catalogo_tene.pdf
+  #   - name: Catalogo Generale 2013
+  #     link: catalogo_tene_2013.pdf
+  #   - name: Catalogo Weekend 2014
+  #     link: catalogo_weekend_2014.pdf
+  #   - name: Catalogo 25-40mm 2014
+  #     link: catalogo_sp 25_40mm_2014.pdf
+  #   - name: Catalogo 58-70mm 2014
+  #     link: catalogo_sp 58_70mm_2014.pdf
+  # pricing:
+  #   - name: Listino Generale 2014
+  #     link: listino_pubblico_2014.xlsx
