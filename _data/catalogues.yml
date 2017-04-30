@@ -39,9 +39,11 @@
   catalogue:
     - name: Catalogo Generale
       link: catalogo_nordic_2014.pdf
+    - name: Manuale Nordic
+      link: manuale_nordic.pdf
   pricing:
     - name: Listino Generale
-      link: listino_nordic_costumer.pdf
+      link: listino_nordic.xlsx
 
 # - name: Starmatrix
 #   web: http://www.starmatrix.cn
@@ -73,6 +75,13 @@
   pricing:
     - name: Listino Blue Bay
       link: listino_bluebay.pdf
+
+- name: Klep
+  web: https://www.facebook.com/kosmointernational.it
+  tag: klep
+  pricing:
+    - name: Listino Klep
+      link: listino_klep.pdf
 
 - name: Tene
   tag: tene
