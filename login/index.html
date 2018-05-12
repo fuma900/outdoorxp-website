@@ -26,6 +26,13 @@ page: login
 				  <button type="submit" class="btn btn-primary btn-block">Accedi</button>
 				</form>
 				<p class="text-center">Per ottenere le credenziali d'accesso <a href="https://outdoorexperience.wufoo.com/forms/z6o2sfz0pjfjhw/" onclick="window.open(this.href,  null, 'height=434, width=680, toolbar=0, location=0, status=1, scrollbars=1, resizable=1'); return false">contattaci</a>.</p>
+				<p class="text-center">Attenzione! Effetuando la richiesta accettate la nostra <a href="/privacy">privacy policy</a>.</p>
 		</article>
 	</section>
 </div>
+
+<script charset="utf-8">
+	if(window.location.hash == '#privacy') {
+  	$('#privacy-link').click();
+	}
+</script>

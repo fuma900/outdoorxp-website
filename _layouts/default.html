@@ -6,13 +6,14 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>Outdoor Experience di Sergio Dossena{{ page.title }}</title>
+		<title>Outdoor Experience Srl{{ page.title }}</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 			<script src="/js/prod/parse-ck.js"></script>
+			<!--
 			{% if page.page == 'admin' %}
 				<script src="/js/prod/admin-ck.js"></script>
 				<script type="text/javascript">
@@ -37,8 +38,10 @@
 					}
 				</script>
 			{% endif %}
+			-->
 
 		<link rel="stylesheet" href="/css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Roboto:300,700,400' rel='stylesheet' type='text/css'>
 		<link rel="shortcut icon" href="/img/icons/favicon.ico" type="image/x-icon" />
 		<link rel="apple-touch-icon" href="/img/icons/apple-touch-icon.png" />
 		<link rel="apple-touch-icon" sizes="57x57" href="/img/icons/apple-touch-icon-57x57.png" />
@@ -61,7 +64,11 @@
 		<noscript>
 				<center>Javascript &egrave; disabilitato. Attivalo per usare tutte le funzionalit&agrave; del sito.</center>
 		</noscript>
-
+		<div id="cookie" style="display:none;position:relative">
+			<p class="text-center">Questo sito può usare dei cookie per migliorare la vostra esperienza sul sito.</p>
+			<p class="text-center">Continuando nella navigazione accettate la nostra privacy policy. <a href="/privacy">Maggiori informazioni</a></p>
+			<span class="glyphicon glyphicon-remove" style="position: absolute;top: 50%;right: 20px;cursor: pointer;" id="dismiss-cookie"></span>
+		</div>
 		<div id="wrap">
 			{% include navigation.html %}
 			{{ content }}
@@ -75,6 +82,15 @@
 		<script type="text/javascript" src="/js/vendor/spamspan.js"></script>
 		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
+		<script>
+			if (!$.cookie('cookieEU')){
+				$.cookie('cookieEU', true, { expires: 7, path: '/' });
+				$('#cookie').show();
+			}
+			$('#dismiss-cookie').click(function(){
+				$('#cookie').hide();
+			});
+		</script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

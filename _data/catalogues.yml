@@ -1,3 +1,10 @@
+- name: Heliana
+  web: http://www.heliana-power.com
+  tag: heliana
+  catalogue:
+    - name: Catalogo Generale
+      link: catalogo_heliana.pdf
+
 - name: Beautiful
   web: http://www.beautifool.it
   tag: beautifool
@@ -5,29 +12,42 @@
     - name: Catalogo Generale
       link: catalogo_beautifool_2014.pdf
 
+# - name: Bestway
+#   web: http://www.bestwaycorp.us
+#   tag: bestway
+
 - name: Nordic Hot Tubs
   web: http://www.nordichottubs.com
   tag: nordic
   catalogue:
     - name: Catalogo Generale
       link: catalogo_nordic_2014.pdf
+    - name: Manuale Nordic
+      link: manuale_nordic.pdf
   pricing:
     - name: Listino Generale
-      link: listino_nordic_costumer.xlsx
+      link: listino_nordic.xlsx
 
-- name: Starmatrix
-  web: http://www.starmatrix.cn
-  tag: starmatrix
+- name: Outdoor Experience
+  web: \#
+  tag: outdoorexperience
   catalogue:
-    - name: Catalogo Generale
-      link: catalogo_starmatrix_2014.pdf
+    - name: Catalogo Gartenkraft e Starmist
+      link: catalogo_starmatrix.pdf
   pricing:
-    - name: Listino Generale
-      link: listino_starmatrix_2014.xls
+    - name: Listino Blue Bay
+      link: listino_bluebay.pdf
+
+- name: Klep
+  web: https://www.facebook.com/kosmointernational.it
+  tag: klep
+  pricing:
+    - name: Listino Klep
+      link: listino_klep.pdf
 
 - name: Tene
   tag: tene
   web: http://www.tenekaubandus.ee
   catalogue:
     - name: Catalogo Generale
-      link: catalogo_tene_2013.pdf
+      link: catalogo_tene.pdf

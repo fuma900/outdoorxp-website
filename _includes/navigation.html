@@ -42,23 +42,26 @@
 					<a href="/login" type="button" class="btn btn-default navbar-btn text-center hidden-xs">Accedi</a>
 				{% endif %}
 			-->
-				<a href="#" type="button" class="btn navbar-btn text-center hidden-xs access"></a>
+				<!--<li {% if page.page == 'login' %}class="active"{% endif %}><a href="#" class="hidden-xs access"></a></li>-->
 			</ul>
+			<!--
 			<script charset="utf-8">
+					var access_btn = $('.access.btn');
 					var access = $('.access');
 					if (!loggedIn) {
 						access.click(function () {
 							location.replace('/login');
 						});
-						access.addClass('btn-default');
+						access_btn.addClass('btn-default');
 						access.html('Accedi');
 					} else if(loggedIn) {
 						access.click(logout);
 						access.html('Esci');
-						access.addClass('btn-danger logout-button');
+						access_btn.addClass('btn-danger logout-button');
 						$('#partner-link').removeClass('hide');
 					}
 			</script>
+			-->
 		</div><!-- /.navbar-collapse -->
 	</div>
 </nav>
